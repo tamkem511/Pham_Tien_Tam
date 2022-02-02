@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link src="homePage.html">
+    <link rel="stylesheet" href="./fontawesome-free-5.15.4-web/css/all.min.css"></link>
+    <link rel="stylesheet" href="renderProductSearch.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="homePage.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="titleWeb">
+            <!-- Phần tải và kết nối ứng dụng -->
+            <div class="titleWeb_connect">
+                 <ul class="titleWeb_connect_application">
+                     <li><a href="http://">Kênh Người Bán</a></li><hr>
+                     <li><a href="http://">Trở Thành Người Bán</a></li><hr>
+                     <li class="access_app">
+                         <span>Tải Ứng Dụng</span>
+                         <div id="qrCode">
+                            <div class="qrCode_scan">
+                                <i class="fas fa-qrcode" ></i>
+                             </div>
+                            
+                             <div class="download_application">
+                                 <div>
+                                    <i class="fab fa-apple"></i>
+                                     <a href="https://www.apple.com/app-store/">App Store</a >
+                                 </div>
+                                 <div>
+                                    <i class="fab fa-google-play"></i>
+                                    <a href="https://play.google.com/store"> CH Play</a>
+                                 </div>
+                             </div>
+                         </div>
+                        </li>
+                        <hr>
+                     <li>
+                         <a href="http://">kết Nối</a>
+                         <a href="https://www.facebook.com/tam.phamtien.904"><i class="fab fa-facebook"></i></a>
+                         <a href="https://www.instagram.com/tam.phamtien.904/">
+                            <i class="fab fa-instagram"></i>
+                         </a>
+                    </li>
+                 </ul>
+            </div>
+
+            <!-- Phâng thông báo và đăng nhập đăng ký úng dụng -->
+            <div class="titleWeb_access">
+                <ul class="titleWeb_access_application">
+                    <li class="notification">
+                        <i class="fas fa-bell"></i>
+                        <span>Thông Báo</span>
+                        <div class="notification_render">
+                            <i class="fas fa-cube"></i>
+                            <div class="message_notification">Đăng Nhập Để Xem Thông Báo</div>
+                            <div class="login_register_in_notification">
+                                <button>
+                                    <a href="login.html">Đăng Nhập</a>
+                                </button>
+                                <button>
+                                    <a href="register.html">Đăng Ký</a>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-question-circle"></i>
+                        <span>Hỗ Trợ</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-language"></i>
+                        <span>Tiếng Việt</span>
+                    </li>
+                    <hr>
+                    <li>
+                        <button id="account" onclick="openAccount()">
+                            <img src="img/user.jpg" class="user" id="avata">
+                            <div id="nameUser"> </div>
+                        </button>
+                        <div id="renderFromAccount">
+                            <!-- Phần form account in bên JS-->
+
+                            <!-- Phần Thay ĐỔi Tên -->
+
+                            <!-- Thay Đổi ảnh đại diện -->
+                            
+                            <!-- Phần thay đổi mật khẩu -->
+                            
+                            
+                            
+                        </div>
+                    
+            </div>
+        </div>
+        <!-- Phần logo và phâng tìm kiếm -->
+        <div class="logo_search">
+            <div class="logo">
+                <a href="renderProductSearch.html">
+                    <img src="img/logo.jpg">
+                </a>
+            </div>
+            <div class="search_product">
+                <div class="click-search">
+                    <input type="text" id="search" placeholder="Tìm Kiếm Sản Phẩm">
+                    <button id="btn_click" onclick="btnCick()">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="list_title">
+                    <ul class="title_search">
+                        <li>
+                            <a href="#suaChua">Sữa chua </a>
+                        </li>
+                        <li>
+                            <a href="#banhSua">Bánh sữa  </a>
+                        </li>
+                        <li>
+                            <a href="#suaTuoi">Sữa tươi </a>
+                        </li>
+                        <li>
+                            <a href="#caramen">Caramen </a>
+                        </li>
+                        <li>
+                            <a href="#traSua">Trà sữa </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="cart">
+                <span id="solg_cart">3</span>
+                <i class="fas fa-cart-plus" onclick="openCart2()"></i>
+                <div class="cart_render">
+                    <i class="fas fa-cube"></i>
+                    <div class="message_cart">Đăng Nhập Để Xem Giỏ Hàng</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+  
+    <div id="cart_product">
+    
+    
+    </div>
+
+    <div id="webb">
+        <div id="contentProduct">
+            <!-- Phần Ảnh sản phẩm -->
+            <div id="imgProduct">
+                <!-- ẢNh to hiển thị -->
+                <div id="imgRender">
+                    <img src="products/bánh sữa non.jpg" id="big_img" onclick="renderIMGMain()">
+                </div>
+                <!-- 1 vài ảnh  -->
+                <div id="imgOther">
+                    <img src="products/sữa chua nha đam size nhỏ.jpg" alt=""  id="renderImg1" onclick="renderIMG1()">
+                    <img src="products/sữa chua trà xanh size nhỏ.jpg" alt="" id="renderImg2" onclick="renderIMG2()">
+                    <img src="products/sữa tươi dê tuyệt trùng và thanh trùng.jpg" alt="" id="renderImg3" onclick="renderIMG3()">
+                    <img src="products/trà sữa các loại.jpg" alt="" id="renderImg4" onclick="renderIMG4()">
+                </div>
+                <!-- chia sẻ và follow -->
+                <div id="share_follow">
+                    <div id="share">
+                        <span>Chia Sẻ : </span>
+                        <a href="https://www.facebook.com/">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.messenger.com/">
+                            <i class="fab fa-facebook-messenger"></i>
+                        </a>
+                        <a href="https://twitter.com/">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://mail.google.com/mail/u/0/#inbox">
+                            <i class="fas fa-mail-bulk"></i>
+                        </a>
+                    </div>
+                    <hr>
+                    <div id="follow">
+                        <i class="far fa-heart"></i>
+                        <span>Đã Thích : 2k</span>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Phần thông tin đặt hàng -->
+            <div id="infosellProduct">
+                <!-- Tên Sản Phẩm -->
+                <div id="nameProduct">
+                    <span>Sữa chua nha đam size nhỏ có nhân là hạt nha đam , sữa được làm từ bò tươi aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</span>
+                </div>
+                <!-- Đánh Giá -->
+                <div id="evaluate">
+                    <div id="evaluate_star">
+                        <span>2.7</span>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <hr>
+                    <div id="danhgia">
+                        <span>3</span>
+                        <span>Đánh Giá</span>
+                    </div>
+                    <hr>
+                    <div id="daban">
+                        <span>1.2k</span>
+                        <span>Đã Bán</span>
+                    </div>
+                </div>
+                <!-- giá và số lượng -->
+                <div id="price_quantity">
+                    <div>
+                        <span id="price_Product">60.000đ</span>
+                    </div>
+                    <hr>
+                    <div>
+                        <span>Số Lượng : </span>
+                        <span style="font-weight:bold;">1,2k</span>
+                    </div>
+                    <hr>
+                    <div>
+                        <span style="font-weight:bold;">50%</span>
+                        <span>GIẢM</span>
+                    </div>
+                </div>
+                <!-- thông tin sản phảm -->
+                <div id="productInformation">
+                    <table border="0" cellspacing="20" cellpadding="0">
+                        <tr>
+                            <td>Deal Sốc</td>
+                            <td>
+                                Mua Kèm Deal Sốc
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td>Vận Chuyện Tới </td>
+                            <td>
+                                Đồng Thịnh - Minh Đài - Tân Sơn - Phú Thọ
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td>Phí Vận Chuyển </td>
+                            <td>23.000đ</td>
+                        </tr>
+    
+                        <tr>
+                            <td>Size</td>
+                            <td>
+                              <form name="kich_thuoc">
+                                <input type="radio" name="size" value="Size Nhỏ" onclick="sizeMin()"> Size Nhỏ <br>
+                                <input type="radio" name="size" value = "Size Trung Bình" onclick="sizeAVG()"> Size Trung Bình <br>
+                                <input type="radio" name="size" value="Size To" onclick="sizeMax()"> Size To
+                              </form>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td>Số Lượng</td>
+                            <td>
+                                <input type="number" value="1" style="width:50px" id="so_luong">
+                                <span>3000 sản phẩm có sẵn</span>
+                            </td>
+                        </tr>     
+                    </table>
+                </div>
+                <hr>
+                <div id="confirmSell">
+                    <button id="add_cart" onclick="addCart()">
+                        Thêm Vào Giỏ Hàng
+                    </button>
+                    
+                    <button id="sellProduct" onclick="sellProduct()" value="0">
+                        Mua Hàng
+                    </button>
+               </div>
+                <!-- bảo hành -->
+                <div id="insurance">
+                    <div>
+                        <span>Shop Đảm Bảo : </span>
+                    </div>
+                    <div>
+                        <span>3 Ngày Trả Hàng / Hoàn Tiền</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+        <!-- Phần chủ của hàng -->
+    <div id="infomation_shop">
+        <div id="employee">
+            <div id="logo_shop">
+                <img src="img/chi-vang-ba-vi-a-1434.jpg">
+            </div>
+            <div id="status_shop">
+                <div id="shop_name">
+                    Sữa Chị Vàng
+                </div>
+                <div id="time_active">
+                    Online 25 Phút Trước
+                </div>
+                <div id="chat">
+                    <button onclick="chatNow()">
+                        <i class="fas fa-sms"></i>
+                        <div>Chát Ngay</div>
+                    </button>
+                    <button>
+                       <a href="xemShop.html" style="text-decoration: none; color:black;">
+                        <i class="fas fa-store-alt"></i>
+                        <div>Xem Shop</div>
+                       </a>
+                    </button>
+                    <div id="chat_now">
+                        
+                    </div>
+                </div>
+            </div>
+         </div>
+     
+        <hr>
+         <div id="rate_feedback">
+             <table border="0" cellspacing="20">
+                 <tr>
+                     <td id="title_rate">
+                         <span style="color:black">Đánh Giá : </span>
+                         <span>9</span>
+                     </td>
+                     <td id="title_rate">
+                        <span>Tỷ Lệ Phản Hồi :</span>
+                        <span> 62%</span>
+                     </td>
+                     <td id="title_rate">
+                        <span>Thành Lập : </span>
+                        <span>10 năm</span>
+                     </td>
+                 </tr>
+    
+    
+                 <tr>
+                    <td id="title_rate">
+                        <span style="color:black">Sản Phẩm : </span>
+                        <span>24</span>
+                    </td>
+                    <td id="title_rate">
+                       <span>Thời Gian Phản Hồi : </span>
+                       <span>Trong Vài Phút</span>
+                    </td>
+                    <td id="title_rate">
+                       <span>Người Tham Gia : </span>
+                       <span>12 Nghìn Người</span>
+                    </td>
+                 </tr>
+             </table>
+         </div>
+    </div>
+    
+    <!-- Phần Đánh Giá sản phẩm -->
+    
+    <div id="comment_product">
+        <h2>
+            Đánh giá sản Phẩm
+        </h2>
+        <div id="enter_comment">
+            <input type="text" placeholder="Mời Bạn Nhập Ý Kiến Của Bạn" id="enter_text_comment">
+            <button id="to_send" onclick="addComments()">
+                <i class="fas fa-sign-in-alt"></i>
+            </button>
+        </div>
+    
+        <!-- Phần user comment -->
+        <div id="user_comment">
+    
+     
+    
+    
+        </div>
+    </div>
+    
+    
+     
+    </div>
+       
+</body>
+</html>

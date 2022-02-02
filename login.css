@@ -1,0 +1,180 @@
+
+        header{
+            position:absolute;
+            display: flex;
+            width:100%;
+        }
+      .logo img{
+          width:100px;
+          height: 100px;
+          border-radius: 50%;
+      }
+      .title_left{
+          display: flex;
+          width:600px;
+      }
+      .title_left div{
+          margin: 0px 5px;
+          font-size:20px
+      }
+      .name_shop{
+          color:tomato;
+          position:absolute;
+          left: 120px;
+          top: 10px;
+      }
+      .title_left div:last-child{
+        position:absolute;
+          left: 290px;
+          top: 10px;
+      }
+      .title_right{
+          position:absolute;
+          right:50px ;
+          top: 40px;
+      }
+      .title_right a{
+          color:tomato
+      }
+
+      /* Phần form */
+      .form{
+          position:absolute;
+          top: 120px ;
+          width:100%;
+          height:600px;
+          background-color:aqua;
+          display: flex;
+      }
+      .login{
+          position:absolute;
+          top: 50px;
+          left: 33%;
+          width:400px;
+          height:400px;
+          background-color:burlywood;
+          border-radius:5px;
+          border:2px solid black;
+      }
+      #dangnhap{
+          width:355px;
+          height:40px;
+          border-radius:5px;
+          background-color:tomato;
+          position: absolute;
+          top: 130px;
+          left:20px;
+          cursor: pointer;
+      }
+       #dangnhap:hover{
+           transform: translateY(3px);
+       }
+
+      #phone_number{
+          position: absolute;
+          top: 70px;
+          left:20px
+      }
+      #password{
+        position: absolute;
+        left:20px;
+        top: 130px;
+    }
+    #btn_eye{
+          position: absolute;
+          width: 40px;
+          height: 45px;
+          right: 20px;
+          top: 130px;
+          border-radius: 5px;
+    }
+      #phone_number,
+      #password{
+          width:350px;
+          height:40px;
+          border-radius: 5px;
+      }
+      .login div:nth-child(3){
+          display: flex;
+      }
+      .login div:nth-child(4){
+       position: absolute;
+     
+    }
+    .login div:nth-child(4) button{
+        position: absolute;
+        top: 150px;
+        left:20px;
+        height:40px;
+        width:360px;
+        border-radius: 5px;
+        background-color: tomato;
+     }
+    .login div:nth-child(5){
+        position: absolute;
+        top: 250px;
+        left:20px
+     }
+     .link_login{
+         position: absolute;
+         display: flex;
+         top: 290px;
+         left:20px
+     }
+     .link_login div{
+         margin: 0px 10px;
+     }
+     .facebook{
+         background-color: rgb(11, 126, 235);
+     }
+     .google{
+        background-color: rgb(4, 47, 87);
+     }
+     .apple{
+        background-color: rgb(8, 21, 34);
+     }
+     .facebook,
+     .google,
+     .apple{
+         width:100px;
+         height:35px;
+         color:white
+     }
+     .facebook a,
+     .google a,
+     .apple a{
+         width:100px;
+         height:35px;
+         color:white
+     }
+
+     .register{
+         position: absolute;
+         top: 350px;
+         left:20px;
+     }
+     .line2{
+         position: relative;
+         top: 210px;
+     }
+     .info_sale img{
+         width:500px;
+         height:500px;
+         position: absolute;
+         top: 50px;
+         left: 50px;
+     }
+     #errorLogin{
+         position: absolute;
+         top: 177px;
+         font-size:11px;
+         left:25px;
+         color:red;
+     }
+     /* Phân quay lại giao diện */
+     #comeback{
+         position: absolute;
+         top:130px;
+         z-index: 11;
+         color:red;
+     }

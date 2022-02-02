@@ -1,0 +1,254 @@
+{
+  "account": [
+    {
+      "id": 1,
+      "name": "Pham Tat Thanh",
+      "phone": "0984919145",
+      "password": "Thanhpham1979@"
+    },
+    {
+      "id": 2,
+      "name": "Nguyen Kim Ngan",
+      "phone": "0377831487",
+      "password": "Ngankim81@"
+    },
+    {
+      "name": "Pham Tien Tam",
+      "phone": "0397127215",
+      "password": "Tamkem5112002@",
+      "id": 3
+    },
+    {
+      "name": "Khuat Huu Dat",
+      "phone": "0123456789",
+      "password": "Khuatdat123@",
+      "id": 4
+    },
+    {
+      "name": "Pham Thanh Tinh",
+      "phone": "0987654321",
+      "password": "ThanTinh317@",
+      "id": 5
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "img": "<img src='products/bánh sữa đặc có đường.jpg' alt=''>",
+      "name": "Bánh sữa đặc có đường được làm từ sữa bò nguyên chất",
+      "price": "25.000",
+      "selled": "1,2k"
+    },
+    {
+      "id": 2,
+      "img": "<img src='products/bánh sữa đặc vị socola.jpg' alt=''>",
+      "name": "Bánh sữa đặc vị sôcla được làm từ sữa bò và socola nguyên chất",
+      "price": "30.000",
+      "selled": "1,8k"
+    },
+    {
+      "id": 3,
+      "img": "<img src='products/váng sữa chua.jpg' alt=''>",
+      "name": "Váng sữa bò non chưa chế biến nguyên chất được đóng hộp (4 hộp 1 cầu)",
+      "price": "20.000",
+      "selled": "9k"
+    },
+    {
+      "id": 4,
+      "img": "<img src='products/sữa chua nha đam size nhỏ.jpg' alt=''>",
+      "name": "Sữa chua hương vị nha đam có nhân là hạt nha đam size bé (1 thùng 12 hộp)",
+      "price": "80.000",
+      "selled": "1,5k"
+    },
+    {
+      "id": 5,
+      "img": "<img src='products/sữa tươi dê tuyệt trùng và thanh trùng.jpg' alt=''>",
+      "name": "Combo 2 chai sữa tươi dê thanh trùng và tuyệt trùng (chai 1 lít rưỡi)",
+      "price": "85.000",
+      "selled": "2,2k"
+    },
+    {
+      "id": 6,
+      "img": "<img src='products/combo bánh sữa dê.jpg' alt=''>",
+      "name": "Combo 5 hộp bánh sữa dê đóng hộp trang trọng ",
+      "price": "100.000",
+      "selled": "1,2k"
+    },
+    {
+      "id": 7,
+      "img": "<img src='products/bánh sữa nhân phô mai.jpg' alt=''>",
+      "name": "Bánh sữa có đường nhân phô mai (được làm từ sữa bò)",
+      "price": "30.000",
+      "selled": "8k"
+    },
+    {
+      "id": 8,
+      "img": "<img src='products/sữa chua chanh lep size nhỏ.jpg' alt=''>",
+      "name": "Sữa chua chanh leo có đường size nhỏ (Không có nhân)",
+      "price": "75.000",
+      "selled": "1,1k"
+    },
+    {
+      "id": 9,
+      "img": "<img src='products/caramen.jpg' alt=''>",
+      "name": "Sữa chua caramen ,nguyên liệu chính từ trứng và nhân là lòng đỏ trứng",
+      "price": "60.000",
+      "selled": "1,2k"
+    },
+    {
+      "id": 10,
+      "img": "<img src='products/full bộ bánh sữa.jpg' alt=''>",
+      "name": "Full bộ bánh sữa các loại (bánh sữa dê,nhân phô mai,socola...)",
+      "price": "120.000",
+      "selled": "1k"
+    },
+    {
+      "id": 11,
+      "img": "<img src='products/combo sữa tươi và bánh sữa.jpg' alt=''>",
+      "name": "Combo sữa tươi bò và bánh sữa dê (giảm giá 25%)",
+      "price": "50.000",
+      "selled": "1,3k"
+    },
+    {
+      "id": 12,
+      "img": "<img src='products/bánh young cake.jpg' alt=''>",
+      "name": "Bánh ngọt Young Cake được chế biến từ sữa bò và lòng đỏ trứng",
+      "price": "45.000",
+      "selled": "3,1k"
+    },
+    {
+      "id": 13,
+      "img": "<img src='products/sữa chua nếp cẩm size nhỏ.jpg' alt=''>",
+      "name": "Sữa chua nếp cẩm size nhỏ (nhân gạo cẩm)",
+      "price": "25.000",
+      "selled": "1,7k"
+    },
+    {
+      "id": 14,
+      "img": "<img src='products/sua-tuoi-it-duong-vinamilk-100-sua-tuoi-hop-1-lit-202104121637399877.jpg' alt=''>",
+      "name": "Sữa tươi ít đường vinamilk đóng hộp",
+      "price": "25.000",
+      "selled": "1,2k"
+    },
+    {
+      "id": 15,
+      "img": "<img src='products/trà sữa các loại.jpg' alt=''>",
+      "name": "Trà sữa vị ngô ,nhân từ thạch hương ngô (chai 300ml)",
+      "price": "10.000",
+      "selled": "6k"
+    },
+    {
+      "id": 16,
+      "img": "<img src='products/combo 3 sản phẩm sữa thanh trùng.jpg' alt=''>",
+      "name": "Combo 3 sản phẩm sữa thanh trùng ,được làm từ sữa bò",
+      "price": "25.000",
+      "selled": "1,2k"
+    },
+    {
+      "id": 17,
+      "img": "<img src='products/trà sữa các loại.jpg' alt=''>",
+      "name": "Trà sữa vị trà xanh ,nhân từ thạch hương trà bát tiên (chai 300ml)",
+      "price": "25.000",
+      "selled": "1,2k"
+    },
+    {
+      "id": 18,
+      "img": "<img src='products/sữa chua trà xanh size nhỏ.jpg' alt=''>",
+      "name": "Sữa chua vị trà xanh size nhỏ (không có nhân)",
+      "price": "65.000",
+      "selled": "1,2k"
+    },
+    {
+      "id": 19,
+      "img": "<img src='products/trà sữa các loại.jpg' alt=''>",
+      "name": "trà sữa hương chanh leo,nhân thạch rau câu (chai 300ml)",
+      "price": "10.000",
+      "selled": "900"
+    },
+    {
+      "id": 20,
+      "img": "<img src='products/3ef941d0c2ec42ffa99ccef56678d57b.jpg' alt=''>",
+      "name": "Sữa chua nếp cẩm size to,nhân cẩm từ gạo nếp cái hoa vàng",
+      "price": "25.000",
+      "selled": "1,2k"
+    },
+    {
+      "id": 21,
+      "img": "<img src='products/vang-sua-mixxi-vani-plus-1.png' alt=''>",
+      "name": "Váng sữa chua ba vì ,nguyên chất được làm từ sữa 100%",
+      "price": "25.000",
+      "selled": "1,2k"
+    },
+    {
+      "id": 22,
+      "img": "<img src='products/sua-chua-uong-ba-vi-vi-chanh-giay-95ml.jpg' alt=''>",
+      "name": "Sữa hoa quả hương thập cẩm từ 4 loại hoa quả",
+      "price": "25.000",
+      "selled": "1,2k"
+    },
+    {
+      "id": 23,
+      "img": "<img src='products/sua-chua-uong-vi-dau-300x300.jpg' alt=''>",
+      "name": "Sữa uống hoa quả hương dâu tây (chai 200ml)",
+      "price": "25.000",
+      "selled": "1,2k"
+    },
+    {
+      "id": 24,
+      "img": "<img src='products/37411adc810bc3111a35b0034994e553.jpg' alt=''>",
+      "name": "Sữa chua bò size lớn (1 thùng 15 hộp cỡ lớn)",
+      "price": "25.000",
+      "selled": "1,2k"
+    }
+  ],
+  "comments": [
+    {
+      "id": 0,
+      "img": "<img src='img/dat.jpg'>",
+      "name": "Khuat Huu Dat",
+      "content": " Sữa chua nếp cẩm rất ngon ,vị không ngọt cũng không quá nhạt,giao hàng đúng thời điểm cho shop 5 sao"
+    },
+    {
+      "id": 1,
+      "img": "<img src='img/duong.jpg'>",
+      "name": "Nguyen Duy Duong",
+      "content": "Sữa tươi uống rất ngon nha, đặc biệt là combo 3 sữa tuoi thanh trùng vừa ngon vừa rẻ mong shop có thêm nhiều ưu đãi"
+    },
+    {
+      "id": 2,
+      "img": "<img src='img/thang.jpg'>",
+      "name": "Ha Huu Thang",
+      "content": "Tôi nghĩ chúng ta nên thay kẹo tết bằng các loại của bánh sữa thật sự ăn rất ngon và rẻ tuy ít nhung chất luongj hơn nhiều với mấy loại ngoài quán"
+    },
+    {
+      "id": 3,
+      "img": "<img src='img/thaoAnh.jpg'>",
+      "name": "Thao Annh",
+      "content": "Đúng là tiền nào của đấy ăn hộp sữa tuy hơi đắt 1 tý nhưng chất lượng thì khỏi bàn ,khác xa với sữa chua ngoài quán"
+    },
+    {
+      "img": "<img src='img/user.jpg'>",
+      "name": "Pham Tien Tam",
+      "content": "cảm ơn shop sản phẩm rất tốt ",
+      "id": 4
+    },
+    {
+      "img": "<img src='img/user.jpg'>",
+      "name": "Pham Tien Tam",
+      "content": "sản phẩm rất ngon ạ",
+      "id": 5
+    },
+    {
+      "img": "<img src='img/user.jpg'>",
+      "name": "Pham Tien Tam",
+      "content": "sản phẩm đúng chuẩn chất lượng ngon...",
+      "id": 6
+    }
+  ],
+  "chat": [
+    {
+      "id": 1,
+      "content": "Chúng Tôi Xin Chào Quý Khách"
+    }
+  ]
+}

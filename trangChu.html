@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./fontawesome-free-5.15.4-web/css/all.min.css"></link>
+    <link rel="stylesheet" href="homePage.css" type="text/css">
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <link rel="stylesheet" href="renderProductSearch.css" type="text/css">
+    <link href="renderProductSearch.html" type="text/html">
+    <script src="homePage.js"></script>
+    <script src="login_register.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+   
+        <header class="header">
+            <div class="titleWeb">
+                <!-- Phần tải và kết nối ứng dụng -->
+                <div class="titleWeb_connect">
+                     <ul class="titleWeb_connect_application">
+                         <li><a href="http://">Kênh Người Bán</a></li><hr>
+                         <li><a href="http://">Trở Thành Người Bán</a></li><hr>
+                         <li class="access_app">
+                             <span>Tải Ứng Dụng</span>
+                             <div id="qrCode">
+                                <div class="qrCode_scan">
+                                    <i class="fas fa-qrcode" ></i>
+                                 </div>
+                                
+                                 <div class="download_application">
+                                     <div>
+                                        <i class="fab fa-apple"></i>
+                                         <a href="https://www.apple.com/app-store/">App Store</a >
+                                     </div>
+                                     <div>
+                                        <i class="fab fa-google-play"></i>
+                                        <a href="https://play.google.com/store"> CH Play</a>
+                                     </div>
+                                 </div>
+                             </div>
+                            </li>
+                            <hr>
+                         <li>
+                             <a href="http://">kết Nối</a>
+                             <a href="https://www.facebook.com/tam.phamtien.904"><i class="fab fa-facebook"></i></a>
+                             <a href="https://www.instagram.com/tam.phamtien.904/">
+                                <i class="fab fa-instagram"></i>
+                             </a>
+                        </li>
+                     </ul>
+                </div>
+    
+                <!-- Phâng thông báo và đăng nhập đăng ký úng dụng -->
+                <div class="titleWeb_access">
+                    <ul class="titleWeb_access_application">
+                        <li class="notification">
+                            <i class="fas fa-bell"></i>
+                            <span>Thông Báo</span>
+                            <div id="notification_render">
+                                <!-- Thông báo 1 -->
+                                <div id="user_notification">
+                                    <div id="img_user_notification">
+                                        <img src="img/dat.jpg">
+                                    </div>
+                                    <div id="name_content_notification">
+                                        <div id="name_user_notification">
+                                           <span>Khuat Huu Dat</span>
+                                        </div>
+    
+                                        <div id="content_user_notification">
+                                            Sữa chua nếp cẩm rất ngon ,vị không ngọt cũng không quá nhạt,giao hàng đúng thời điểm cho shop 5 sao</div>
+                                       </div>
+                                </div>
+                                  <!-- Thông báo 2 -->
+                                <div id="user_notification">
+                                    <div id="img_user_notification">
+                                        <img src="img/duong.jpg">
+                                    </div>
+                                    <div id="name_content_notification">
+                                        <div id="name_user_notification">
+                                           <span>Nguyen Duy Duong</span>
+                                        </div>
+    
+                                        <div id="content_user_notification">
+                                            Sữa tươi uống rất ngon nha, đặc biệt là combo 3 sữa tuoi thanh trùng vừa ngon vừa rẻ mong shop có thêm nhiều ưu đãi</div>
+                                       </div>
+                                </div>
+                                  <!-- Thông báo 3 -->
+                                <div id="user_notification">
+                                    <div id="img_user_notification">
+                                        <img src="img/thang.jpg">
+                                    </div>
+                                    <div id="name_content_notification">
+                                        <div id="name_user_notification">
+                                           <span>Ha Huu Thang</span>
+                                        </div>
+    
+                                        <div id="content_user_notification">
+                                            Tôi nghĩ chúng ta nên thay kẹo tết bằng các loại của bánh sữa thật sự ăn rất ngon và rẻ tuy ít nhung chất luongj hơn nhiều với mấy loại ngoài quán</div>
+                                       </div>
+                                </div>
+                                  <!-- Thông báo 4 -->
+                                  <div id="user_notification">
+                                    <div id="img_user_notification">
+                                        <img src="img/thaoAnh.jpg">
+                                    </div>
+                                    <div id="name_content_notification">
+                                        <div id="name_user_notification">
+                                           <span>Thao Anh</span>
+                                        </div>
+    
+                                        <div id="content_user_notification">
+                                            Đúng là tiền nào của đấy ăn hộp sữa tuy hơi đắt 1 tý nhưng chất lượng thì khỏi bàn ,khác xa với sữa chua ngoài quán</div>
+                                       </div>
+                                </div>
+                            </div>
+                        </li>
+    
+                        <li>
+                            <i class="fas fa-question-circle"></i>
+                            <span>Hỗ Trợ</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-language"></i>
+                            <span>Tiếng Việt</span>
+                        </li>
+                        <hr>
+                        <li>
+                            <button id="account" onclick="openAccount()">
+                                <img src="img/user.jpg" class="user" id="avata">
+                                <div id="nameUser"> </div>
+                            </button>
+                            <div id="renderFromAccount">
+                                <!-- Phần form account in bên JS-->
+    
+                                <!-- Phần Thay ĐỔi Tên -->
+    
+                                <!-- Thay Đổi ảnh đại diện -->
+                                
+                                <!-- Phần thay đổi mật khẩu -->
+                                
+                                
+                                
+                            </div>
+                        
+                </div>
+            </div>
+            <!-- Phần logo và phâng tìm kiếm -->
+            <div class="logo_search">
+                <div class="logo">
+                    <a href="trangChu.html">
+                        <img src="img/logo.jpg">
+                    </a>
+                </div>
+                <div class="search_product">
+                    <div class="click-search">
+                        <input type="text" id="search" placeholder="Tìm Kiếm Sản Phẩm">
+                        <button id="btn_click" onclick="btnCick()">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <div class="list_title">
+                        <ul class="title_search">
+                            <li>
+                                <a href="#suaChua">Sữa chua </a>
+                            </li>
+                            <li>
+                                <a href="#banhSua">Bánh sữa  </a>
+                            </li>
+                            <li>
+                                <a href="#suaTuoi">Sữa tươi </a>
+                            </li>
+                            <li>
+                                <a href="#caramen">Caramen </a>
+                            </li>
+                            <li>
+                                <a href="#traSua">Trà sữa </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="cart">
+                    <span id="solg_cart">3</span>
+                    <i class="fas fa-cart-plus" onclick="openCart()"></i>
+                    <div class="cart_render">
+                        <i class="fas fa-cube"></i>
+                        <div class="message_cart">Đăng Nhập Để Xem Giỏ Hàng</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+        <!-- Phần Body -->
+        <!-- Phần giỏ hàng -->
+        <div id="web">
+        <div id="cart_product">
+    
+    
+        </div>
+    
+    
+    <!-- Phần xử lý tìm kiếm -->
+        <div id="handleSearch">
+    
+        </div>
+
+
+       
+    
+    
+        <!-- Phần banner -->
+        <div id="banner">
+            <div id="runBanner">
+                <img src='img/chi-vang-ba-vi-a-1434.jpg'>
+            </div>
+            
+            <div class="fixed_banner">
+                <img src="banner/banhsua1.jpg" alt=""><br>
+                <img src="banner/banhsuakieumoi.jpg"> 
+            </div>
+        </div>
+    
+        <!-- Phần saleWeb -->
+            <ul id="eventWeb">
+                <h2 id="eventWeb_header">Dịch Vụ Cửa Hàng Hộ Trợ Và Ưu Đãi</h2>
+                <li>
+                    <i class="iconsEvent fab fa-salesforce"></i>
+                    <div class="saleWeb_title">Gì Cũng Rẻ</div>
+                </li>
+    
+                <li>
+                    <i class="iconsEvent fas fa-truck"></i>
+                    <div class="saleWeb_title">Free Ship Extra</div>
+                </li>
+    
+                <li>
+                    <i class="iconsEvent fas fa-id-card"></i>
+                    <div class="saleWeb_title">Nạp Thẻ, Hóa Đơn & E - Voucher</div>
+                </li>
+    
+                <li>
+                    <i class="iconsEvent fas fa-blender"></i>
+                    <div class="saleWeb_title">Hàng Chưa Chế Biến</div>
+                </li>
+    
+                <li>
+                    <i class="iconsEvent fas fa-tape"></i>
+                    <div class="saleWeb_title">Hàng Đóng Gói</div>
+                </li>
+    
+                <li>
+                    <i class="iconsEvent fas fa-blog"></i>
+                    <div class="saleWeb_title">Mua Hàng Trực Tuyến</div>
+                </li>
+    
+                <li>
+                    <i class="iconsEvent fas fa-shopping-cart"></i>
+                    <div class="saleWeb_title">Ship Hàng Toàn Quốc</div>
+                </li>
+    
+                <li>
+                    <i class="iconsEvent fab fa-cc-amazon-pay"></i>
+                    <div class="saleWeb_title">Tech Zone - Sản Phẩm Tại Cửa Hàng</div>
+                </li>
+            </ul>
+    
+    
+            <!-- Phần render ra sản phẩm -->
+            <div id="renderProducts">
+                <!-- lisst san pham -->
+                <!-- sản phẩm 1 -->
+                
+                <!-- sản phẩm 2 -->
+                
+                <!-- sản phẩm 3 -->
+                
+                <!-- sản phẩm 4 -->
+    
+                <!-- sản phẩm 5 -->
+    
+                <!-- sản phẩm 6 -->
+    
+                <!-- sản phẩm 7 -->
+    
+                <!-- sản phẩm 8 -->
+    
+            </div>   
+          
+                <!-- Phần next Page -->
+            <div id="nextPage">
+                    <!-- <button value="<"><</button> -->
+                    <button value="1" onclick="page1()">1</button>
+                    <button value="2" onclick="page2()">2</button>
+                    <button value="3" onclick="page3()">3</button>
+                    <!-- <button value=">" onclick="nextpage()">></button> -->
+            </div>
+    
+            <!-- Phần sắp xếp theo chỉ mục -->
+            <div id="sort_by_index">
+                <h3>Tìm Kiếm Theo Danh Mục</h3>
+    <!-- Phần sữa chua -->
+                <h4 class="suachua">Sữa Chua</h4>
+                <div id="suaChua">
+                    <!-- sản phẩm 1 -->
+                   
+                        <div class="product">
+                            <div class="product_img">
+                                <img src='products/37411adc810bc3111a35b0034994e553.jpg' alt=''>
+                            </div>
+                            <div class="product_content">
+                                Sữa chua bò size lớn (1 thùng 15 hộp cỡ lớn)
+                            </div>
+                            <div class="price_selled">
+                                <div>25.000đ</div>
+                                <div>Đã bán : 1,2k</div>
+                            </div>
+                        </div>
+                    <!-- sản phẩm 2 -->
+                    <div class="product">
+                        <div class="product_img">
+                            <img src='products/3ef941d0c2ec42ffa99ccef56678d57b.jpg' alt=''>
+                        </div>
+                        <div class="product_content">
+                            Sữa chua nếp cẩm size to,nhân cẩm từ gạo nếp cái hoa vàng
+                        </div>
+                        <div class="price_selled">
+                            <div>25.000đ</div>
+                            <div>Đã bán : 1,2k</div>
+                        </div>
+                    </div>
+                    <!-- sản phẩm 3 -->
+                    <div class="product">
+                        <div class="product_img">
+                            <img src='products/sữa chua trà xanh size nhỏ.jpg' alt=''>
+                        </div>
+                        <div class="product_content">
+                            Sữa chua vị trà xanh size nhỏ (không có nhân)
+                        </div>
+                        <div class="price_selled">
+                            <div>65.000đ</div>
+                            <div>Đã bán : 1,2k</div>
+                        </div>
+                    </div>
+                    <!-- sản phẩm 4 -->
+                    <div class="product">
+                        <div class="product_img">
+                            <img src='products/sữa chua nếp cẩm size nhỏ.jpg' alt=''>
+                        </div>
+                        <div class="product_content">
+                            Sữa chua nếp cẩm size nhỏ (nhân gạo cẩm)
+                        </div>
+                        <div class="price_selled">
+                            <div>25.000đ</div>
+                            <div>Đã bán : 1,7k</div>
+                        </div>
+                    </div>
+                   <!-- sản phẩm 5 -->
+                   <div class="product">
+                    <div class="product_img">
+                        <img src='products/sữa chua chanh lep size nhỏ.jpg' alt=''>
+                    </div>
+                    <div class="product_content">
+                        Sữa chua chanh leo có đường size nhỏ (Không có nhân)
+                    </div>
+                    <div class="price_selled">
+                        <div>75.000đ</div>
+                        <div>Đã bán : 1,1k</div>
+                    </div>
+                </div>
+                    <!-- sản phẩm 6 -->
+                    <div class="product">
+                        <div class="product_img">
+                            <img src='products/sữa chua nha đam size nhỏ.jpg' alt=''>
+                        </div>
+                        <div class="product_content">
+                            Sữa chua hương vị nha đam có nhân là hạt nha đam size bé (1 thùng 12 hộp)
+                        </div>
+                        <div class="price_selled">
+                            <div>80.000đ</div>
+                            <div>Đã bán : 1,5k</div>
+                        </div>
+                    </div>
+                </div>
+    <!-- bánh sữa -->
+                <h4 class="banhsua">Bánh sữa</h4>
+                <div id="banhSua">
+                     <!-- sản phẩm 1 -->
+                   
+                        <div class="product">
+                            <div class="product_img">
+                                <img src='products/bánh sữa đặc có đường.jpg' alt=''>
+                            </div>
+                            <div class="product_content">
+                                Bánh sữa đặc có đường được làm từ sữa bò nguyên chất
+                            </div>
+                            <div class="price_selled">
+                                <div>25.000đ</div>
+                                <div>Đã bán : 1,2k</div>
+                            </div>
+                        </div>
+                    <!-- sản phẩm 2 -->
+                    <div class="product">
+                        <div class="product_img">
+                            <img src='products/bánh sữa đặc vị socola.jpg' alt=''>
+                        </div>
+                        <div class="product_content">
+                            Bánh sữa đặc vị sôcla được làm từ sữa bò và socola nguyên chất
+                        </div>
+                        <div class="price_selled">
+                            <div>30.000đ</div>
+                            <div>Đã bán : 1,8k</div>
+                        </div>
+                    </div>
+                    <!-- sản phẩm 3 -->
+                    <div class="product">
+                        <div class="product_img">
+                            <img src='products/bánh sữa nhân phô mai.jpg' alt=''>
+                        </div>
+                        <div class="product_content">
+                            Bánh sữa có đường nhân phô mai (được làm từ sữa bò)
+                        </div>
+                        <div class="price_selled">
+                            <div>30.000đ</div>
+                            <div>Đã bán : 8k</div>
+                        </div>
+                    </div>
+                    <!-- sản phẩm 4 -->
+                    <div class="product">
+                        <div class="product_img">
+                            <img src='products/bánh young cake.jpg' alt=''>
+                        </div>
+                        <div class="product_content">
+                            Bánh ngọt Young Cake được chế biến từ sữa bò và lòng đỏ trứng
+                        </div>
+                        <div class="price_selled">
+                            <div>45.000đ</div>
+                            <div>Đã bán : 1,1k</div>
+                        </div>
+                    </div>
+                </div>
+    <!-- Sữa tươi -->
+                <h4 class="sua_tuoi">Sữa Tươi</h4>
+                <div id="suaTuoi">
+                        <!-- sản phẩm 1 -->
+                                    
+                        <div class="product">
+                            <div class="product_img">
+                                <img src='products/sữa tươi dê tuyệt trùng và thanh trùng.jpg' alt=''>
+                            </div>
+                            <div class="product_content">
+                                Combo 2 chai sữa tươi dê thanh trùng và tuyệt trùng (chai 1 lít rưỡi)
+                            </div>
+                            <div class="price_selled">
+                                <div>85.000đ</div>
+                                <div>Đã bán : 2,2k</div>
+                            </div>
+                        </div>
+                        <!-- sản phẩm 2 -->
+                        <div class="product">
+                        <div class="product_img">
+                            <img src='products/combo sữa tươi và bánh sữa.jpg' alt=''>
+                        </div>
+                        <div class="product_content">
+                            Combo sữa tươi bò và bánh sữa dê (giảm giá 25%)
+                        </div>
+                        <div class="price_selled">
+                            <div>30.000đ</div>
+                            <div>Đã bán : 8k</div>
+                        </div>
+                        </div>
+                        <!-- sản phẩm 3 -->
+                        <div class="product">
+                        <div class="product_img">
+                            <img src='products/sua-tuoi-it-duong-vinamilk-100-sua-tuoi-hop-1-lit-202104121637399877.jpg' alt=''>
+                        </div>
+                        <div class="product_content">
+                            Sữa tươi ít đường vinamilk đóng hộp
+                        </div>
+                        <div class="price_selled">
+                            <div>30.000đ</div>
+                            <div>Đã bán : 8k</div>
+                        </div>
+                        </div>
+                </div>
+    <!-- caramen -->
+                <h4 class="caramen">Caramen</h4>
+                <div id="caramens">
+                    <div class="product">
+                        <div class="product_img">
+                            <img src='products/caramen.jpg' alt=''>
+                        </div>
+                        <div class="product_content">
+                            Sữa chua caramen ,nguyên liệu chính từ trứng và nhân là lòng đỏ trứng
+                        </div>
+                        <div class="price_selled">
+                            <div>60.000đ</div>
+                            <div>Đã bán : 1,2k</div>
+                        </div>
+                        </div>
+                </div>
+    <!-- Trà Sữa -->
+                <h4 class="tra_sua">Trà Sữa</h4>
+                <div id="traSua">
+                    <!-- sản phẩm 1 -->
+                   
+                    <div class="product">
+                        <div class="product_img">
+                            <img src='products/trà sữa các loại.jpg' alt=''>
+                        </div>
+                        <div class="product_content">
+                            Trà sữa vị ngô ,nhân từ thạch hương ngô (chai 300ml)
+                        </div>
+                        <div class="price_selled">
+                            <div>10.000đ</div>
+                            <div>Đã bán : 6k</div>
+                        </div>
+                    </div>
+                <!-- sản phẩm 2 -->
+                <div class="product">
+                    <div class="product_img">
+                        <img src='products/trà sữa các loại.jpg' alt=''>
+                    </div>
+                    <div class="product_content">
+                        Trà sữa vị trà xanh ,nhân từ thạch hương trà bát tiên (chai 300ml)
+                    </div>
+                    <div class="price_selled">
+                        <div>25.000đ</div>
+                        <div>Đã bán : 1,2k</div>
+                    </div>
+                </div>
+                <!-- sản phẩm 3 -->
+                <div class="product">
+                    <div class="product_img">
+                        <img src='products/trà sữa các loại.jpg' alt=''>
+                    </div>
+                    <div class="product_content">
+                        trà sữa hương chanh leo,nhân thạch rau câu (chai 300ml)
+                    </div>
+                    <div class="price_selled">
+                        <div>30.000đ</div>
+                        <div>Đã bán : 8k</div>
+                    </div>
+                </div>
+                <!-- sản phẩm 4 -->
+                <div class="product">
+                    <div class="product_img">
+                        <img src='products/sua-chua-uong-ba-vi-vi-chanh-giay-95ml.jpg' alt=''>
+                    </div>
+                    <div class="product_content">
+                        Sữa hoa quả hương thập cẩm từ 4 loại hoa quả
+                    </div>
+                    <div class="price_selled">
+                        <div>25.000đ</div>
+                        <div>Đã bán : 1,2k</div>
+                    </div>
+                </div>
+               <!-- sản phẩm 5 -->
+               <div class="product">
+                <div class="product_img">
+                    <img src='products/sua-chua-uong-vi-dau-300x300.jpg' alt=''>
+                </div>
+                <div class="product_content">
+                    Sữa uống hoa quả hương dâu tây (chai 200ml)
+                </div>
+                <div class="price_selled">
+                    <div>25.000đ</div>
+                    <div>Đã bán : 8k</div>
+                </div>
+            </div>
+                <!-- sản phẩm 6 -->
+                <div class="product">
+                    <div class="product_img">
+                        <img src='products/vang-sua-mixxi-vani-plus-1.png' alt=''>
+                    </div>
+                    <div class="product_content">
+                        Váng sữa chua ba vì ,nguyên chất được làm từ sữa 100%
+                    </div>
+                    <div class="price_selled">
+                        <div>30.000đ</div>
+                        <div>Đã bán : 8k</div>
+                    </div>
+                </div>
+            </div>
+                </div>
+                
+            </div>
+
+            <!-- phần comment -->
+            <div id="comment_products">
+                <h2>
+                    Đánh giá sản Phẩm
+                </h2>
+                <div id="enter_comment">
+                    <input type="text" placeholder="Mời Bạn Nhập Ý Kiến Của Bạn" id="enter_text_comment">
+                    <button id="to_send" onclick="addComments()">
+                        <i class="fas fa-sign-in-alt"></i>
+                    </button>
+                </div>
+            
+                <!-- Phần user comment -->
+                <div id="user_comment">
+            
+             
+            
+            
+                </div>
+            </div>
+    
+                    <!-- Phần foooter -->
+                    <footer id="footer">
+                        <hr>
+                        <ul class="infoShop">
+                            <li class="footer footer-line1">
+                                <h2>Thông Tin Liên Hệ</h2>
+                               <!-- <div>
+                                   <div>Hotline : 0397127215</div>
+                                   <div>Zalo : Tâm Phạm</div>
+                                   <div>Facebook : Phạm Tiến Tâm</div>
+                               </div> -->
+                               <div>
+                                   Trụ sở chính tại Hà Nội : Tòa Rice 
+                                   City - KĐT Tây Nam Linh Đàm - Hoàng Mai 
+                                   - Hà Nội
+                                   <div>Hotline : 0397127215</div>
+                                   <div>Zalo : Tâm Phạm</div>
+                                   <div>Facebook : Phạm Tiến Tâm</div>
+                               </div>
+                            </li>
+            
+                            <li class="footer footer-line2">
+                               <h2>Thành Lập Doanh Nghiệp</h2>
+                               <div>
+                                Dịch vụ thành lập công ty cổ phần
+                                Thành lập công ty TNHH 1 thành viên
+                                Thành lập công ty TNHH 2 thành viên
+                                Dịch vụ thành lập chi nhánh công ty
+                                Dịch vụ thành lập địa điểm kinh doanh
+                                Thành lập công ty tại Hà Nam
+                                Thành lập công ty tại Hưng Yên
+                                Thành lập công ty tại Bắc Ninh
+                               </div>
+                            </li>
+            
+                            <li class="footer footer-line3">
+                                <h2>Thay Đổi Nội Dung ĐKKD</h2>
+                                <div>
+                                    Dịch vụ tăng vốn điều lệ công ty
+                                    Bổ sung ngành nghề kinh doanh
+                                    Dịch vụ thay đổi đăng ký kinh doanh
+                                    Dịch vụ thay đổi tên công ty
+                                    Dịch vụ thay đổi địa chỉ công ty
+                                    Thay đổi người đại diện pháp luật
+                                    Dịch vụ thay đổi thành viên
+                                    Thành lập công ty tại Vĩnh Phúc
+                                </div>
+                            </li>
+            
+                            <li class="footer footer-line4">
+                               <h2>Dịch Vụ Khác</h2>
+                               <div>
+                                    Dịch vụ xin cấp giấy phép con
+                                    Dịch vụ làm lại con dấu
+                                    Dịch vụ giải thể công ty
+                                    Dịch vụ làm báo cáo tài chính
+                                    Dịch vụ kiểm toán
+                                    Dịch vụ kế toán thuế
+                                    Đào tạo kế toán trưởng doanh nghiệp
+                                    Thành lập công ty tại Nam Định
+                               </div>
+                            </li>
+                        </ul>
+                        <hr>
+                    <hr class="ngan_cach">
+                    <h3 class="end2">Copyright © Uy Tín - Tận Tâm Tel/zalo: 0973981661</h3>
+                    </footer>
+    </div>
+       
+</body>
+</html>

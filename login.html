@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./fontawesome-free-5.15.4-web/css/all.min.css"></link>
+    <link rel="stylesheet" href="login.css">
+    <script src="login_register.js"></script>
+</head>
+<body>
+    <div class="form_login">
+        <!-- Phần header -->
+        <header>
+            <div class="title_left">
+                <div class="logo">
+                    <img src="img/logo.jpg">
+                 </div>
+                <div class="name_shop">
+                    <h3>Tâm Kem Shop</h3>
+                </div>
+                <div >
+                    <h3>Đăng Nhập</h3>
+                </div>
+            </div>
+
+            <div class="title_right">
+               <a href="https://help.shopee.vn/vn/s/">Cần Trợ Giúp ?</a>
+            </div>
+        </header>
+        <!-- phần quay lại trang giao diện -->
+        <a href="giaoDien.html" id="comeback">Quay lại giao diện</a>
+        <!-- Phần đăng nhập -->
+        <div class="form">
+  
+                <div class="login">
+                    <div>
+                        <h3 style="margin: 20px 20px;">Đăng Nhập</h3>
+                    </div>
+ 
+                    <div>
+                        <input type="text" id="phone_number" placeholder="Nhập Số Điện Thoại">
+                    </div>
+                    <div>
+                        <input type="password" id="password" placeholder="Nhập Mật Khẩu">
+                        <button id="btn_eye" onclick="clickEye()">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <span id="errorLogin"></span>
+                    </div>
+                    <div>
+                        <form action="trangchu.html">
+                            <input type="button" value="Đăng Nhập" id="dangnhap"  onclick="clickLogin()">
+                        </form>
+                    </div>
+                    <div>
+                        <a href="https://shopee.vn/buyer/reset">Quên mật khẩu</a >
+                      
+                    </div>
+                    <hr class="line2">
+                    <div class="link_login">
+                        <div>
+                            <button class="facebook">
+                                <i class="fab fa-facebook"></i>
+                                <a href="https://www.facebook.com/">Facebook</a>
+                            </button>
+ 
+                        </div>
+                        <div>
+                            <button class="google">
+                                <i class="fab fa-google"></i>
+                                <a href="https://mail.google.com/mail/u/0/?ogbl#inbox">Google</a>
+                            </button>
+                        </div>
+                        <div>
+                            <button class="apple">
+                                 <i class="fab fa-apple"></i>
+                                 <a href="https://www.apple.com/">Apple</a>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="register">
+                        <span>Bạn mới biết đến Tâm Kem Shope</h4>
+                        <a href="register.html">Đăng Ký</a>
+                    </div>
+               </div>
+         </div>
+             
+    </div> 
+
+</body>
+</html>

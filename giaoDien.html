@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<link>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./fontawesome-free-5.15.4-web/css/all.min.css"></link>
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <script src="base.js"></script>
+</head>
+<body>
+    <div class="fullWeb">
+        <!-- Phần header -->
+        <header>
+            <div class="titleWeb">
+                <!-- Phần tải và kết nối ứng dụng -->
+                <div class="titleWeb_connect">
+                     <ul class="titleWeb_connect_application">
+                         <li><a href="http://">Kênh Người Bán</a></li><hr>
+                         <li><a href="http://">Trở Thành Người Bán</a></li><hr>
+                         <li class="access_app">
+                             <span>Tải Ứng Dụng</span>
+                             <div id="qrCode">
+                                <div class="qrCode_scan">
+                                    <i class="fas fa-qrcode" ></i>
+                                 </div>
+                                
+                                 <div class="download_application">
+                                     <div>
+                                        <i class="fab fa-apple"></i>
+                                         <a href="https://www.apple.com/app-store/">App Store</a >
+                                     </div>
+                                     <div>
+                                        <i class="fab fa-google-play"></i>
+                                        <a href="https://play.google.com/store"> CH Play</a>
+                                     </div>
+                                 </div>
+                             </div>
+                            </li>
+                            <hr>
+                         <li>
+                             <a href="http://">kết Nối</a>
+                             <a href="https://www.facebook.com/tam.phamtien.904"><i class="fab fa-facebook"></i></a>
+                             <a href="https://www.instagram.com/tam.phamtien.904/">
+                                <i class="fab fa-instagram"></i>
+                             </a>
+                        </li>
+                     </ul>
+                </div>
+
+                <!-- Phâng thông báo và đăng nhập đăng ký úng dụng -->
+                <div class="titleWeb_access">
+                    <ul class="titleWeb_access_application">
+                        <li class="notification">
+                            <i class="fas fa-bell"></i>
+                            <span>Thông Báo</span>
+                            <div class="notification_render">
+                                <i class="fas fa-cube"></i>
+                                <div class="message_notification">Đăng Nhập Để Xem Thông Báo</div>
+                                <div class="login_register_in_notification">
+                                    <button>
+                                        <a href="login.html">Đăng Nhập</a>
+                                    </button>
+                                    <button>
+                                        <a href="register.html">Đăng Ký</a>
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-question-circle"></i>
+                            <span>Hỗ Trợ</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-language"></i>
+                            <span>Tiếng Việt</span>
+                        </li>
+                        <li>
+                            <a href="login.html">Đăng Nhập</a>
+                        </li>
+                        <hr>
+                        <li>
+                            <a href="register.html">Đăng Ký</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Phần logo và phâng tìm kiếm -->
+            <div class="logo_search">
+                <div class="logo">
+                    <img src="img/logo.jpg">
+                </div>
+                <div class="search_product">
+                    <div class="click-search">
+                        <input type="text" id="search" placeholder="Tìm Kiếm Sản Phẩm">
+                        <button id="btn_click" onclick="btnCick()">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <div class="list_title">
+                        <ul class="title_search">
+                            <li>Sữa chua</li>
+                            <li>Bánh sữa </li>
+                            <li>Sữa tươi bò</li>
+                            <li>Sữa tươi dê</li>
+                            <li>Caramen</li>
+                            <li>Trà sữa</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="cart">
+                    <i class="fas fa-cart-plus"></i>
+                    <div class="cart_render">
+                        <i class="fas fa-cube"></i>
+                        <div class="message_cart">Đăng Nhập Để Xem Giỏ Hàng</div>
+                        <div class="login_register_in_cart">
+                            <button>
+                                <a href="login.html">Đăng Nhập</a>
+                            </button>
+                            <button>
+                                <a href="register.html">Đăng Ký</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Phần banner -->
+        <div class="banner">
+            <div id="run_banner">
+                <img src='banner/banhsua1.jpg'>
+            </div>
+            <div class="next_banner">
+                <button value="<" onclick="back()""><</button>
+                <button class="items" value="1">1</button>
+                <button class="items" value="2">2</button>
+                <button class="items" value="3">3</button>
+                <button class="items" value="4">4</button>
+                <button class="items" value="5">5</button>
+                <button class="items" value="6">6</button>
+                <button class="items" value="7">7</button>
+                <button class="items" value="8">8</button>
+                <button class="items" value="9">9</button>
+                <button  value=">" onclick="next()">></button>
+            </div>
+            <div class="fixed_banner">
+                <img src="banner/banhsua1.jpg" alt=""><br>
+                <img src="banner/banhsuakieumoi.jpg"> 
+            </div>
+        </div>
+
+        <!-- Phần saleWeb -->
+            <ul class="eventWeb">
+                <h2 id="eventWeb_header">Dịch Vụ Cửa Hàng Hộ Trợ Và Ưu Đãi</h2>
+                <li>
+                    <i class="iconsEvent fab fa-salesforce"></i>
+                    <div class="saleWeb_title">Gì Cũng Rẻ</div>
+                </li>
+
+                <li>
+                    <i class="iconsEvent fas fa-truck"></i>
+                    <div class="saleWeb_title">Free Ship Extra</div>
+                </li>
+
+                <li>
+                    <i class="iconsEvent fas fa-id-card"></i>
+                    <div class="saleWeb_title">Nạp Thẻ, Hóa Đơn & E - Voucher</div>
+                </li>
+
+                <li>
+                    <i class="iconsEvent fas fa-blender"></i>
+                    <div class="saleWeb_title">Hàng Chưa Chế Biến</div>
+                </li>
+
+                <li>
+                    <i class="iconsEvent fas fa-tape"></i>
+                    <div class="saleWeb_title">Hàng Đóng Gói</div>
+                </li>
+
+                <li>
+                    <i class="iconsEvent fas fa-blog"></i>
+                    <div class="saleWeb_title">Mua Hàng Trực Tuyến</div>
+                </li>
+
+                <li>
+                    <i class="iconsEvent fas fa-shopping-cart"></i>
+                    <div class="saleWeb_title">Ship Hàng Toàn Quốc</div>
+                </li>
+
+                <li>
+                    <i class="iconsEvent fab fa-cc-amazon-pay"></i>
+                    <div class="saleWeb_title">Tech Zone - Sản Phẩm Tại Cửa Hàng</div>
+                </li>
+            </ul>
+
+        <!-- Phần banner2 -->
+        <div class="banner2">
+           <marquee>tamkem</marquee>
+        </div>
+        <!-- Phần sản phẩm bán chạy -->
+        <div class="sellingProducts">
+            <div  class="sellingProducts_header">
+                <div>
+                    Sản Phẩm Bán Chạy
+                </div>
+                <div>
+                    Thương Hiệu Nổi Bật
+                </div>
+                <button id="see_more">
+                    Xem Thêm >
+                </button>
+            </div>
+
+            <div class="sellingProducts_product">
+                <ul class="list_product_sell">
+                    <li class="clickProductSell">
+                        <img src="products/sữa chua chanh lep size nhỏ.jpg">
+                        <div class="list_product_sell_price">80.000đ</div>
+                    </li>
+
+                    <li class="clickProductSell">
+                        <img src="products/sữa chua nha đam size nhỏ.jpg">
+                        <div class="list_product_sell_price">80.000đ</div>
+                    </li>
+
+                    <li class="clickProductSell">
+                        <img src="products/trà sữa các loại.jpg">
+                        <div class="list_product_sell_price">10.000đ</div>
+                    </li>
+
+                    <li class="clickProductSell">
+                        <img src="products/bánh sữa đặc vị socola.jpg">
+                        <div class="list_product_sell_price">25.000đ</div>
+                    </li>
+
+                    <li class="clickProductSell">
+                        <img src="products/sữa chua nha đam.jpg">
+                        <div class="list_product_sell_price">75.000đ</div>
+                    </li>
+
+                    <li class="clickProductSell">
+                        <img src="products/combo sữa tươi và bánh sữa.jpg">
+                        <div class="list_product_sell_price">160.000đ</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Phần danh mục -->
+        <div class="category">
+            <h2>Danh Mục Của Hàng</h2>
+            <table border="1" cellspacing="40" cellpadding="90px">
+                <tr class="category_product">
+                    <td class="list_category">
+                        <img src="products/sữa chua nếp cẩm size nhỏ.jpg">
+                        <div>Sữa Chua Bò</div>
+                    </td>
+                    <td class="list_category">
+                        <img src="products/sữa chua chanh lep size nhỏ.jpg">
+                        <div>Sữa Chua Dê</div>
+                    </td>
+                    <td class="list_category">
+                        <img src="products/bánh sữa non.jpg">
+                        <div>Bánh Sữa Nhạt</div>
+                    </td>
+                    <td class="list_category">
+                        <img src="products/bánh sữa đặc có đường.jpg">
+                        <div>Bánh Sữa Đường</div>
+                    </td>
+                    <td class="list_category">
+                        <img src="products/combo 3 sản phẩm sữa thanh trùng.jpg">
+                        <div>Sữa Tươi Bò</div>
+                    </td>
+                    <td class="list_category">
+                        <img src="products/sữa tươi dê tuyệt trùng và thanh trùng.jpg">
+                        <div>Sữa Tươi Dê</div>
+                    </td>
+                    <td class="list_category">
+                        <img src="products/trà sữa các loại.jpg">
+                        <div>Trà Sữa</div>
+                    </td>
+                    <td class="list_category">
+                        <img src="products/vang-sua-mixxi-vani-plus-1.png">
+                        <div>Váng Sữa</div>
+                    </td>
+                    <td class="list_category">
+                        <img src="products/caramen.jpg">
+                        <div>Caramen</div>
+                    </td>
+                    <td class="list_category">
+                        <img src="products/sua-tuoi-it-duong-vinamilk-100-sua-tuoi-hop-1-lit-202104121637399877.jpg">
+                        <div>Sữa Hộp</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Phần flash sale -->
+        <div class="flashSale">
+            <div class="flastSale_header">
+                <h2 class="flashSale_title">Flast Sale</h2>
+                <div id="run_time">
+                    <div id="run_time_day"></div> 
+                    <div id="run_time_hours"></div> 
+                    <div id="run_time_minutes"></div> 
+                    <div id="run_time_seconds"></div>
+                </div>
+                <div class="times">
+                    (Đến 9 giờ ngày 13-12-2021)
+                </div>
+            </div>
+            <ul class="list_flastSale">
+                <li class="list_flastSale_product">
+                    <img src="products/combo 3 sản phẩm sữa thanh trùng.jpg">
+                    <h3>190.000đ</h3>
+                    <div>Đã Bán : 200</div>
+                </li>
+                <li class="list_flastSale_product">
+                    <img src="products/combo sữa tươi và bánh sữa.jpg">
+                    <h3>160.000đ</h3>
+                    <div>Đã Bán : 20</div>
+                </li>
+                <li class="list_flastSale_product">
+                    <img src="products/full bộ bánh sữa.jpg">
+                    <h3>200.000đ</h3>
+                    <div>Đã Bán : 23</div>
+                </li>
+                <li class="list_flastSale_product">
+                    <img src="products/combo bánh sữa dê.jpg">
+                    <h3>120.000đ</h3>
+                    <div>Đã Bán : 180</div>
+                </li>
+                <li class="list_flastSale_product">
+                    <img src="products/combo 5 chai trà sữa.jpg">
+                    <h3>50.000đ</h3>
+                    <div>Đã Bán : 120</div>
+                </li>
+                <li class="list_flastSale_product">
+                    <img src="products/sữa tươi dê tuyệt trùng và thanh trùng.jpg">
+                    <h3>160.000đ</h3>
+                    <div>Đã Bán : 1110</div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Phần foooter -->
+        <footer>
+            <ul class="infoShop">
+                <li class="footer footer-line1">
+                    <h2>Thông Tin Liên Hệ</h2>
+                   <!-- <div>
+                       <div>Hotline : 0397127215</div>
+                       <div>Zalo : Tâm Phạm</div>
+                       <div>Facebook : Phạm Tiến Tâm</div>
+                   </div> -->
+                   <div>
+                       Trụ sở chính tại Hà Nội : Tòa Rice 
+                       City - KĐT Tây Nam Linh Đàm - Hoàng Mai 
+                       - Hà Nội
+                       <div>Hotline : 0397127215</div>
+                       <div>Zalo : Tâm Phạm</div>
+                       <div>Facebook : Phạm Tiến Tâm</div>
+                   </div>
+                </li>
+
+                <li class="footer footer-line2">
+                   <h2>Thành Lập Doanh Nghiệp</h2>
+                   <div>
+                    Dịch vụ thành lập công ty cổ phần
+                    Thành lập công ty TNHH 1 thành viên
+                    Thành lập công ty TNHH 2 thành viên
+                    Dịch vụ thành lập chi nhánh công ty
+                    Dịch vụ thành lập địa điểm kinh doanh
+                    Thành lập công ty tại Hà Nam
+                    Thành lập công ty tại Hưng Yên
+                    Thành lập công ty tại Bắc Ninh
+                   </div>
+                </li>
+
+                <li class="footer footer-line3">
+                    <h2>Thay Đổi Nội Dung ĐKKD</h2>
+                    <div>
+                        Dịch vụ tăng vốn điều lệ công ty
+                        Bổ sung ngành nghề kinh doanh
+                        Dịch vụ thay đổi đăng ký kinh doanh
+                        Dịch vụ thay đổi tên công ty
+                        Dịch vụ thay đổi địa chỉ công ty
+                        Thay đổi người đại diện pháp luật
+                        Dịch vụ thay đổi thành viên
+                        Thành lập công ty tại Vĩnh Phúc
+                    </div>
+                </li>
+
+                <li class="footer footer-line4">
+                   <h2>Dịch Vụ Khác</h2>
+                   <div>
+                        Dịch vụ xin cấp giấy phép con
+                        Dịch vụ làm lại con dấu
+                        Dịch vụ giải thể công ty
+                        Dịch vụ làm báo cáo tài chính
+                        Dịch vụ kiểm toán
+                        Dịch vụ kế toán thuế
+                        Đào tạo kế toán trưởng doanh nghiệp
+                        Thành lập công ty tại Nam Định
+                   </div>
+                </li>
+            </ul>
+        </footer>
+        <hr>
+        <hr class="ngancach3">
+        <h3 class="end">Copyright © Uy Tín - Tận Tâm Tel/zalo: 0973981661</h3>
+
+    </div>
+    <script src="base.js"></script>
+</body>
+</html>

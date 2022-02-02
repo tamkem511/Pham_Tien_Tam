@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="homePage.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="homePage.js"></script>
+    <script src="login_register.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="./fontawesome-free-5.15.4-web/css/all.min.css"></link>
+</head>
+<body>
+    <header class="header">
+        <div class="titleWeb">
+            <!-- Phần tải và kết nối ứng dụng -->
+            <div class="titleWeb_connect">
+                 <ul class="titleWeb_connect_application">
+                     <li><a href="http://">Kênh Người Bán</a></li><hr>
+                     <li><a href="http://">Trở Thành Người Bán</a></li><hr>
+                     <li class="access_app">
+                         <span>Tải Ứng Dụng</span>
+                         <div id="qrCode">
+                            <div class="qrCode_scan">
+                                <i class="fas fa-qrcode" ></i>
+                             </div>
+                            
+                             <div class="download_application">
+                                 <div>
+                                    <i class="fab fa-apple"></i>
+                                     <a href="https://www.apple.com/app-store/">App Store</a >
+                                 </div>
+                                 <div>
+                                    <i class="fab fa-google-play"></i>
+                                    <a href="https://play.google.com/store"> CH Play</a>
+                                 </div>
+                             </div>
+                         </div>
+                        </li>
+                        <hr>
+                     <li>
+                         <a href="http://">kết Nối</a>
+                         <a href="https://www.facebook.com/tam.phamtien.904"><i class="fab fa-facebook"></i></a>
+                         <a href="https://www.instagram.com/tam.phamtien.904/">
+                            <i class="fab fa-instagram"></i>
+                         </a>
+                    </li>
+                 </ul>
+            </div>
+
+            <!-- Phâng thông báo và đăng nhập đăng ký úng dụng -->
+            <div class="titleWeb_access">
+                <ul class="titleWeb_access_application">
+                    <li class="notification">
+                        <i class="fas fa-bell"></i>
+                        <span>Thông Báo</span>
+                        <div class="notification_render">
+                            <i class="fas fa-cube"></i>
+                            <div class="message_notification">Đăng Nhập Để Xem Thông Báo</div>
+                            <div class="login_register_in_notification">
+                                <button>
+                                    <a href="login.html">Đăng Nhập</a>
+                                </button>
+                                <button>
+                                    <a href="register.html">Đăng Ký</a>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-question-circle"></i>
+                        <span>Hỗ Trợ</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-language"></i>
+                        <span>Tiếng Việt</span>
+                    </li>
+                    <hr>
+                    <li>
+                        <button id="account" onclick="openAccount()">
+                            <img src="img/user.jpg" class="user" id="avata">
+                            <div id="nameUser"> </div>
+                        </button>
+                        <div id="renderFromAccount">
+                            <!-- Phần form account in bên JS-->
+
+                            <!-- Phần Thay ĐỔi Tên -->
+
+                            <!-- Thay Đổi ảnh đại diện -->
+                            
+                            <!-- Phần thay đổi mật khẩu -->
+                            
+                            
+                            
+                        </div>
+                    
+            </div>
+        </div>
+        <!-- Phần logo và phâng tìm kiếm -->
+        <div class="logo_search">
+            <div class="logo">
+                <a href="trangChu.html">
+                    <img src="img/logo.jpg">
+                </a>
+            </div>
+            <div class="search_product">
+                <div class="click-search">
+                    <input type="text" id="search" placeholder="Tìm Kiếm Sản Phẩm">
+                    <button id="btn_click" onclick="btnCick()">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="list_title">
+                    <ul class="title_search">
+                        <li>
+                            <a href="#suaChua">Sữa chua </a>
+                        </li>
+                        <li>
+                            <a href="#banhSua">Bánh sữa  </a>
+                        </li>
+                        <li>
+                            <a href="#suaTuoi">Sữa tươi </a>
+                        </li>
+                        <li>
+                            <a href="#caramen">Caramen </a>
+                        </li>
+                        <li>
+                            <a href="#traSua">Trà sữa </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="cart">
+                <span class="solg_cart">3</span>
+                <i class="fas fa-cart-plus" onclick="Cart()"></i>
+                <div class="cart_render">
+                    <i class="fas fa-cube"></i>
+                    <div class="message_cart">Đăng Nhập Để Xem Giỏ Hàng</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Phần body -->
+    <div class="content">
+        <!-- Phần thông tin shope -->
+        <div class="infoShopCV">
+            <div class="infoUser_Shope">
+                <div class="img_name-user">
+                    <div class="img-user">
+                        <img src="img/duong.jpg">
+                        <div class="like_Shope">Yêu Thích +</div>
+                    </div>
+                    <div class="name_timeActive">
+                        <div>Sữa Chị Vàng</div>
+                        <div>Online 20 phút trước</div>
+                    </div>
+                </div>
+
+                <div class="follow_chat">
+                    <button id="follow">+ THEO DÕI</button>
+                    <button onclick="chat_user()">CHAT</button>
+                    <div id="formChat">
+                        <!-- Phần hiển thị form chát -->
+                    </div>
+                </div>
+            </div>
+            <div class="infoProduct">
+                <div class="all_product">
+                    <span>Sản Phẩm : </span>
+                    <span>129</span>
+                </div>
+                <div class="user_follow">
+                    <span>Theo Dõi : </span>
+                    <span>10</span>
+                </div>
+                <div class="rep_chat">
+                    <span>Tỷ Lệ Phản Hồi Chát : </span>
+                    <span>99% Trong Vài Giờ</span>
+                </div>
+            </div>
+
+            <div class="follow_evaluate">
+                <div class="number_follow">
+                    <span>Người Theo Dõi : </span>
+                    <span>234k</span>
+                </div>
+                <div class="other_follow">
+                    <span>Đánh Giá : </span>
+                    <span>4.9(48,8k Đánh Giá)</span>
+                </div>
+                <div class="rep_chat">
+                    <span>Tham Gia : </span>
+                    <span>3 năm trước</span>
+                </div>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <!-- Phần 1 số hình ảnh của chửa hàng -->
+        <div class="pictureByShope">
+            <div class="title_picture_by_shop">
+                <h2>Một vài hình ảnh của của hàng</h2>
+            </div>
+            <div class="list_picture">
+               <div class="line_picture">
+                <ul class="picture">
+                    <li>
+                            <img src="https://scontent.fhan5-7.fna.fbcdn.net/v/t39.30808-6/271743305_659979568520037_8449898345598058779_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=gBKRPKB6PvMAX_C-L_Z&_nc_ht=scontent.fhan5-7.fna&oh=00_AT9vC6V-mkYpTk6Xz8r2WLobq7tUs1LBdVectjL1LZUIng&oe=61E571A2">
+                    </li>
+
+                    <li>
+                        <img src="https://scontent.fhan5-8.fna.fbcdn.net/v/t39.30808-6/271760930_659314771919850_1994558796333272492_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=WmI8Ht-oZuUAX_LaLhA&_nc_ht=scontent.fhan5-8.fna&oh=00_AT_AnRgKin-VgKwyWRzm-3gr6NoAPRW3taR-9ojQhs-dCQ&oe=61E5869D">
+                    </li>
+
+                    <li>
+                        <img src="https://scontent.fhan5-10.fna.fbcdn.net/v/t39.30808-6/269843948_649206486264012_4072680009385982976_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=INvgwRWSU-gAX8nPTHQ&tn=xHuMtp6-cTa5XQmu&_nc_ht=scontent.fhan5-10.fna&oh=00_AT-jK7Kpd5CpMYHtzi7_H3Iuc7pSCxGwqd9KRsCvjmcO9Q&oe=61E44D7A">
+                    </li>
+
+                    <li>
+                        <img src="https://scontent.fhan5-2.fna.fbcdn.net/v/t39.30808-6/265821324_641551113696216_2353274799742615624_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=xEKEz99wjQAAX96jBIH&tn=xHuMtp6-cTa5XQmu&_nc_ht=scontent.fhan5-2.fna&oh=00_AT_Dp5upsWLyPuHds7WciAU5EiN3EpHOfg9zFnPXXAM_4w&oe=61E55341">
+                    </li>
+
+                    <li>
+                        <img src="https://scontent.fhan5-11.fna.fbcdn.net/v/t39.30808-6/265393488_639771807207480_2457655081518653781_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=61yGB7vpROEAX_jfD9w&_nc_ht=scontent.fhan5-11.fna&oh=00_AT9uBdH6cTTO_QAYyzwyaUHi58NBgTsFD0CZanmSoz96xQ&oe=61E3DF62">
+                    </li>
+
+                </ul>
+               </div>
+
+               <!-- line 2 -->
+               <div class="line_picture">
+                <ul class="picture">
+                    <li>
+                        <img src="https://scontent.fhan5-2.fna.fbcdn.net/v/t39.30808-6/260765645_632754297909231_3504424591745608483_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=zdViZyAwbRIAX-SjNc7&_nc_ht=scontent.fhan5-2.fna&oh=00_AT9Okpryxgp3nhM1BYqEBjBH1lt8P24knyAF8erLI7c5lA&oe=61E3CF90">
+                    </li>
+
+                    <li>
+                        <img src="https://scontent.fhan5-11.fna.fbcdn.net/v/t39.30808-6/260784264_632754221242572_7313335893801013817_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=WhO2vtmbaAkAX_3akh1&_nc_ht=scontent.fhan5-11.fna&oh=00_AT_4hfDeAlWEogb0-kGRwAlzcvBt5cHcZ1X9JcCMMaO9jg&oe=61E469C3">
+                    </li>
+
+                    <li>
+                        <img src="https://scontent.fhan5-4.fna.fbcdn.net/v/t39.30808-6/240160773_602378780946783_5770818531165447961_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=CCnVm-Gnb3YAX-xksTC&tn=xHuMtp6-cTa5XQmu&_nc_ht=scontent.fhan5-4.fna&oh=00_AT8_qzALmQ_19TMF7g4YkolTCDxyhJtBIR0kQ2iwj5YWWQ&oe=61E41274">
+                    </li>
+
+                    <li>
+                        <img src="https://scontent.fhan5-8.fna.fbcdn.net/v/t39.30808-6/241063451_597551798096148_225393453274160235_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=730e14&_nc_ohc=4-J8EXFuOeYAX916veL&_nc_ht=scontent.fhan5-8.fna&oh=00_AT_aCpwPT4ZmpusTsQ4RyFMxcxsm7f0MDYrcQ_jMiimpYw&oe=61E43CB0">
+                    </li>
+
+                    <li>
+                        <img src="https://scontent.fhan5-3.fna.fbcdn.net/v/t39.30808-6/241481999_596453834872611_8384952594751091400_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=730e14&_nc_ohc=qXojVps4G2AAX-WLJy4&_nc_ht=scontent.fhan5-3.fna&oh=00_AT9e75PXdNhgC5RzRT_ztJjtgFSK7HSyG9JQXzqDT_STEw&oe=61E4F156">
+                    </li>
+
+                </ul>
+               </div>
+
+               <!-- line 3 -->
+               <div class="line_picture">
+                <ul class="picture">
+                    <li>
+                        <img src="https://scontent.fhan5-8.fna.fbcdn.net/v/t39.30808-6/241374307_594431488408179_3745929717014015094_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=TuR66EU_gU4AX-L6yJr&tn=xHuMtp6-cTa5XQmu&_nc_ht=scontent.fhan5-8.fna&oh=00_AT-CgsmnM9hNSCTv0i5fWjqPVlZAk5y8yGayv_RUOslFdQ&oe=61E46645">
+                    </li>
+
+                    <li>
+                        <img src="https://scontent.fhan5-8.fna.fbcdn.net/v/t39.30808-6/240666002_591866365331358_5195522542651790079_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=wW7SL0qjtLYAX-l3jTJ&_nc_ht=scontent.fhan5-8.fna&oh=00_AT9qKeY1ehuD9gHcT5a4K17FfFPTVQbIDcIBAC-e1sU6dw&oe=61E3F58F">
+                    </li>
+
+                    <li>
+                        <img src="https://scontent.fhan5-6.fna.fbcdn.net/v/t39.30808-6/241191205_591452388706089_3083602856836804103_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=flCsQXQ6udUAX-zpGET&tn=xHuMtp6-cTa5XQmu&_nc_ht=scontent.fhan5-6.fna&oh=00_AT9jHRTnwQq4mva5SMww-auqQEWqZUNo5NssAmh9eMBN-g&oe=61E4C909">
+                    </li>
+
+                    <li>
+                        <img src="https://scontent.fhan5-8.fna.fbcdn.net/v/t39.30808-6/185978324_557765405408121_7317834247454843759_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=p6TWBepKqgwAX9PKgai&_nc_ht=scontent.fhan5-8.fna&oh=00_AT8XpCEPMePInd3ABeWoPAxl_AL9FU9bPgWGH-rhvfiqhQ&oe=61E54EA5">
+                    </li>
+
+                    <li>
+                        <img src="https://scontent.fhan5-11.fna.fbcdn.net/v/t39.30808-6/216233433_550904622760866_1092898825651366837_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=u32yJwGiqlAAX92RMq3&_nc_ht=scontent.fhan5-11.fna&oh=00_AT_yBHbtEvp9m_1MLus1LvD-WBm5qDUHQk7CxUtk_qXBGQ&oe=61E45A4D">
+                    </li>
+
+                </ul>
+               </div>
+
+               <!-- line4 -->
+               <div class="line_picture">
+                <ul class="picture">
+                    <li>
+                    <video height="150px" width="200px" controls>
+                        <source src="products/Bánh sữa chua Chị V....mp4" type="video/mp4">
+                    </video>
+                
+                    </li>
+
+                    <li>
+                        <video height="150px" width="200px" controls>
+                            <source src="products/𝗕𝗔́𝗡𝗛 𝗦𝗨̛̃𝗔 ....mp4" type="video/mp4">
+                        </video>
+                    </li>
+
+                    <li>
+                        <video height="150px" width="200px" controls>
+                            <source src="products/Quy cách đóng sữa ch....mp4" type="video/mp4">
+                        </video>
+                    </li>
+
+                    <li>
+                        <video height="150px" width="200px" controls>
+                            <source src="products/Sữa chua nếp cẩm gửi....mp4" type="video/mp4">
+                        </video>
+                    </li>
+
+                    <li>
+                        <video height="150px" width="200px" controls>
+                            <source src="products/Xe hàng bánh sữa chu....mp4" type="video/mp4">
+                        </video>
+                    </li>
+
+                </ul>
+               </div>
+            </div>
+        </div>
+        <!-- Phần thôn tin về chát lượng của cửa hàng -->
+        <div class="textContentShope">
+            <div class="info_user_shop">
+                 <div class="evaluate_star-report">
+                     <button onclick="evaluateShop()">Đánh Giá Cửa Hàng</button>
+                    
+                        <div id="danh_gia">
+                         
+                        </div>
+                     
+                     <button onclick="reportt()">Báo Cáo Cửa Hàng</button>
+                     <div id="report">
+                         <!-- <button id="time_report" onclick="timeReport()">X</button>
+                         <input type="radio">
+                          <span>Do sản phẩm của shop kém chất lượng</span>
+                         <br>
+                         <input type="radio">
+                         <span>Khách hàng phục vụ không tận tình</span>
+                         <br>
+                         <input type="radio">
+                         <span>Chất lượng giao hàng không đúng tiến độ</span>
+                         <br>
+                         <input type="radio">
+                         <span>Giao hàng không đúng sản phầm đã mua</span>
+                         <br>
+                         <input type="radio">
+                         <span>Sản phẩm đã quá hạn sử dụng</span>
+                         <br>
+                         <button id="send_report" onclick="sendReport()">Gửi</button> -->
+                     </div>
+                 </div>
+                 <div class="all_info_shope">
+                     <ul class="detail_shop">
+                         <h2>CÔNG TY CỔ PHẦN SỮA CHỊ VÀNG BA VÌ</h2>
+                         <hr>
+                         <li>
+                             <span>Tên Quốc tế</span>
+                             <span>CHI VANG BA VI MILK JOINT STOCK COMPANY</span>
+                             
+                         </li>
+                         <hr>
+                         <li>
+                             <span>Tên Viết Tắt</span>
+                             <span>CHI VANG MILK .,JSC</span>
+                         </li>
+                         <hr>
+                         <li>
+                             <span>Mã Số Thuế</span>
+                             <span>0108936877</span>
+                         </li>
+                         <hr>
+                         <li>
+                             <span>Địa Chỉ Thuế</span>
+                             <span>Thôn Việt Long, Xã Tản Lĩnh, Huyện Ba Vì, Hà Nội</span>
+                         </li>
+                         <hr>
+                         <li>
+                             <span>Đại Diện Pháp Luật</span>
+                             <span>Phạm Thị Thanh Huyền</span>
+                         </li>
+                         <hr>
+                         <li>
+                             <span>Điện Thoại</span>
+                             <span>02433881835</span>
+                         </li>
+                         <hr>
+                         <li>
+                             <span>Ngày Cấp</span>
+                             <span>08/10/2019</span>
+                         </li>
+                         <hr>
+                         <li>
+                             <span>Nghành Nghề Chính</span>
+                             <span>Chế biến sữa và các sản phẩm từ sữa</span>
+                         </li>
+                         <hr>
+                         <li>
+                             <span>Trạng Thái</span>
+                             <span>Đang Hoạt Động(Đã được cấp GCN DKT)</span>
+                         </li>
+                         <hr>
+                     </ul>
+                 </div>
+                 <div class="call_error">
+                     <span>
+                        Mọi thắc mắc vui lòng liên hệ CÔNG TY CỔ PHẦN SỮA CHỊ
+                         VÀNG BA VÌ tại địa chỉ: Thôn Việt Long, Xã Tản Lĩnh,
+                          Huyện Ba Vì,
+                         Hà Nội hoặc cơ quan quản lý thuế Huyện Ba Vì, Hà Nội
+                     </span>
+                 </div>
+            </div>
+
+            <div class="item_details_for_sale">
+                <div class="sale_product">
+                    <button>
+                        <a href="trangChu.html">Mua Hàng</a>
+                    </button>
+                </div>
+                <div class="all_info_shope">
+                    <ul class="detail_shop">
+                        <h2>CÔNG TY CỔ PHẦN SỮA CHỊ VÀNG BA VÌ</h2>
+                        <hr>
+                        <li>
+                            <span>Sản Phầm Bán Trên Thị Trường</span>
+                            <span>Sữa và sản phầm từ sữa</span>
+                            
+                        </li>
+                        <hr>
+                        <li>
+                            <span>Sữa Chua</span>
+                            <span>Nếp cẩm,nha đam,chanh leo,sữa chua dê,sữa dừa</span>
+                        </li>
+                        <hr>
+                        <li>
+                            <span>Trà Sữa</span>
+                            <span>Hương Vị : Ngô,Nho,Chanh leo,Dâu Tây</span>
+                        </li>
+                        <hr>
+                        <li>
+                            <span>Bánh Sữa</span>
+                            <span>Socola,sữa đặc,nhân kem,nhân đậu phộng</span>
+                        </li>
+                        <hr>
+                        <li>
+                            <span>Caramen</span>
+                            <span>Caramen trứng,caramen không đường,váng sữa</span>
+                        </li>
+                        <hr>
+                        <li>
+                            <span>Sữa Tươi</span>
+                            <span>Sữa Tươi Thanh Trùng,Sữa Tươi tuyệt Trùng</span>
+                        </li>
+                        <hr>
+                        <li>
+                            <span>Sản Phẩm Từ : </span>
+                            <span>100% Máy Móc ,đóng gói do con người</span>
+                        </li>
+                        <hr>
+                        <li>
+                            <span>Chất Lượng</span>
+                            <span>Sạch Sẽ,Khử Khuẩn Và Đạt Tiêu Chuẩn Quốc Tế</span>
+                        </li>
+                        <hr>
+                        <li>
+                            <span>Chứng Chỉ</span>
+                            <span>Đã được cấp GCN DKT</span>
+                        </li>
+                        <hr>
+                    </ul>
+                </div>
+                <div class="call_error">
+                    <span>
+                       Đảm Bảo Sản Phẩm Chất Lượng ,sạch sẽ khữ trùng đúng kỹ thuật của 
+                       sản xuất. sữa tươi 100% nguyên chất không pha hỗn tạp các chất khác.
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>

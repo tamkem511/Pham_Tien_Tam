@@ -1,0 +1,505 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+@keyframes Fadein {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* Phần header */
+header {
+    width: 100%;
+    height: 130px;
+    position: fixed;
+    background-color: aqua;
+    z-index: 10;
+}
+
+.titleWeb{
+    display: flex;
+    position: relative;
+    margin:5px 0px;
+}
+.titleWeb_connect{
+    position: absolute;
+    left: 20px;
+    z-index: 10;
+}
+.titleWeb_connect_application{
+    display: flex;
+}
+.titleWeb_connect_application li a:hover{
+    opacity:0.8;
+}
+.titleWeb_connect_application li{
+    list-style: none;
+    margin: 0px 5px;
+    
+}
+.titleWeb_connect_application li a{
+  color:rgb(190, 34, 7);
+  font-weight:bold;
+}
+.titleWeb_access{
+    position: absolute;
+    right:20px
+}
+.titleWeb_access_application{
+    display: flex;
+    float: right;
+}
+.titleWeb_access_application li{
+list-style: none;
+margin:0px 5px;
+cursor: pointer;
+}
+.titleWeb_access_application li span:hover{
+    opacity: 0.8;
+}
+.titleWeb_access_application li{
+    color:rgb(190, 34, 7);
+    font-weight:bold;
+  }
+
+.titleWeb_access_application li:nth-child(4) a{
+    color:rgb(190, 34, 7);
+    font-weight:bold;
+}
+.titleWeb_access_application li:last-child a{
+    color:rgb(190, 34, 7);
+    font-weight:bold;
+}
+
+/* Phần QRCODE */
+#qrCode{
+    position: absolute;
+    display: none;
+    margin:0px -3px;
+    animation: FadeIn ease-in 0,9s;
+    z-index: 10;
+    background-color: teal;
+    width:130px;
+}
+#qrCode::before{
+    content:"";
+    display: block;
+    position: absolute;
+    width:90px;
+    height:30px;
+    background-color:transparent;
+    margin: -15px 0px;
+}
+
+.fa-qrcode{
+    font-size: 110px;
+    margin:0px 17px;
+}
+.download_application{
+    display: flex;
+    font-size:11px;
+
+}
+.download_application div{
+margin: 0px 3px;
+}
+.access_app span{
+    color:rgb(190, 34, 7);
+    font-weight:bold;
+    cursor: pointer;
+}
+.access_app span:hover{
+    opacity: 0.8;
+}
+.access_app:hover #qrCode{
+   display: block;
+   animation: Fadein ease-in 0.5s;
+}
+
+/* Phần Thông Báo */
+
+.notification_render{
+    position: absolute;
+    background-color:wheat;
+    height:200px;
+    width:220px;
+    display: none;
+    margin: 10px -130px;
+    z-index: 10;
+    
+}
+.notification_render::before{
+    content: "";
+    position: absolute;
+    display: block;
+    width:50px;
+    height:50px;
+    background-color:wheat;
+    transform: rotate(45deg);
+    margin: 0px 160px;
+    z-index: 1;
+}
+.login_register_in_notification button{
+    width:100px;
+    height:30px;
+}
+.fa-cube{
+    font-size:70px;
+    position: absolute;
+    margin:10px 77px;
+}
+.message_notification{
+    position: absolute;
+    margin:100px 0px;
+}
+.login_register_in_notification{
+    position: absolute;
+    margin:170px 8px
+}
+.notification:hover .notification_render{
+    display: block;
+}
+
+/* Phần logo và tìm kiếm */
+.logo_search{
+    position: absolute;
+    display: flex;
+    height:100px;
+    margin: 25px 0px;
+}
+.logo{
+    margin:0px 25px
+}
+.logo img{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+}
+#search{
+    width:900px;
+    height:35px;
+    margin: 25px 50px;
+    border-radius: 5px;
+}
+.title_search{
+    display: flex;
+    position:absolute;
+    margin: -20px 45px;
+}
+.title_search li{
+    list-style: none;
+    margin:0px 5px;
+    cursor: pointer;
+    color:tomato;
+}
+.title_search li:hover{
+   opacity: 0.8;
+}
+#btn_click{
+    width:50px;
+    position:absolute;
+    margin: 27px -100px;
+    height:35px;
+    border-radius: 5px;
+}
+/* Phần giỏ hàng */
+.fa-cart-plus{
+    font-size:30px;
+}
+.cart{
+    margin: 30px -10px;
+}
+.cart i:hover{
+  opacity: 0.8;
+}
+
+.cart_render{
+    position: absolute;
+    background-color:wheat;
+    height:200px;
+    width:220px;
+    display: none;
+    margin: 10px -130px;
+    z-index: 10;
+    
+}
+.cart_render::before{
+    content: "";
+    position: absolute;
+    display: block;
+    width:50px;
+    height:50px;
+    background-color:wheat;
+    transform: rotate(45deg);
+    margin: -5px 125px;
+    z-index: 1;
+}
+.login_register_in_cart button{
+    width:100px;
+    height:30px;
+}
+.fa-cube{
+    font-size:70px;
+    position: absolute;
+    margin:10px 77px;
+    z-index: 5;
+}
+.message_cart{
+    position: absolute;
+    margin:100px 10px;
+}
+.login_register_in_cart{
+    position: absolute;
+    margin:170px 8px
+}
+.cart:hover .cart_render{
+    display: block;
+}
+.cart:hover .cart_render{
+    display: block;
+}
+
+/* Phần banner */
+
+/* banner Cố Định */
+.fixed_banner{
+    position: absolute;
+    top: 150px;
+    right: 20px;
+}
+.fixed_banner img{
+    width:250px;
+    height:150px
+}
+
+/* Bnaner run */
+#run_banner {
+position: absolute;
+top: 150px;
+left: 20px;
+
+/* padding:50%;
+background-repeat: no-repeat;
+background-position: 20px 150px;
+background-size: 900px 280px;
+background-image:url(banner/nepcap.jpg) ; */
+}
+#run_banner img{
+    /* top: 250px;
+    left: 20px; */
+    width:900px;
+    height:280px;
+}
+
+/* Phần next banner */
+.next_banner{
+    display: flex;
+    position:absolute;
+    top:440px;
+    left:400px
+}
+.next_banner button{
+    margin:0px 5px;
+}
+
+/* Phần sale web và thông tin */
+
+.eventWeb{
+    position:absolute;
+    top: 500px;
+    display:flex;
+    width:100%;
+    height:120px;
+    background-color:rgb(65, 161, 152);
+}
+.eventWeb li{
+    list-style: none;
+    display: block;
+    margin:15px 50px;
+    width:300px;
+}
+.eventWeb li :hover{
+    cursor: pointer;
+    transform: translateX(2px);
+}
+.iconsEvent{
+    font-size:40px;
+    text-align:center;
+    position: relative;
+    left: 20px;
+}
+.saleWeb_title{
+    width:120px;
+    text-align:center;
+    position: absolute;
+    margin: 0px -17px;
+}
+#eventWeb_header{
+    position: absolute;
+    top: -28px;
+    left:20px;
+}
+.chageColor{
+    color:rgb(233, 140, 18);
+}
+
+/* Phần banner 2 */
+.banner2{
+    background-image: url(banner/banner1.jpg);
+    padding: 50%;
+    background-repeat: no-repeat;
+    background-size: 100% 230px;
+    background-position:0px 650px ;
+    /* height:200px; */
+}
+
+/* Phần sản phẩm bán chạy */
+.sellingProducts{
+    position: absolute;
+    top: 900px;
+    width:100%;
+    height: 300px;
+    background-color:rgb(65, 161, 152);
+}
+.sellingProducts_header{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: 20px;
+}
+.sellingProducts_header div{
+    font-size:22px;
+    font-weight:bold;
+    color:rgb(180, 68, 48);
+}
+
+.list_product_sell{
+    display: flex;
+}
+.list_product_sell li{
+    list-style: none;
+    margin: 0px 20px;
+    width:163px;
+    height:220px;
+    background-color:whitesmoke;
+}
+.list_product_sell li:hover{
+    cursor: pointer;
+    transform: translateY(2px);
+}
+.list_product_sell li img{
+    width:163px;
+    margin: 7px auto;
+
+ /* text-align: center; */
+    height:180px;
+}
+
+.list_product_sell_price{
+    color: tomato;
+    margin:0px 55px;
+    position: absolute;
+}
+.sellingProducts_header button{
+    background-color:transparent;
+    border: none;
+    cursor: pointer;
+    color:tomato;
+}
+.sellingProducts_header button:hover{
+    opacity: 0.8;
+}
+
+/* Phần Danh Mục*/
+.list_category img{
+    width:70px;
+    height: 70px;
+}
+.category_product td{
+    text-align: center;
+}
+.category_product td:hover{
+    cursor: pointer;
+    transform: translateY(2px);
+}
+
+/* Phần flatSale */
+.flastSale_header{
+    display: flex;
+}
+.list_flastSale_product img{
+    width:160px;
+    height:170px
+}
+.list_flastSale_product {
+    list-style: none;
+}
+.list_flastSale_product{
+    text-align:center
+}
+.list_flastSale_product h3{
+    color:tomato
+}
+.list_flastSale_product div{
+    color:slategray
+}
+.list_flastSale{
+    display:flex;
+    justify-content:space-around;
+    margin: 10px 20px;
+}
+
+#run_time{
+    display:flex;
+    margin:0px 5px
+}
+
+#run_time_hours,
+#run_time_minutes,
+#run_time_seconds,
+#run_time_day
+{
+   border:1px solid tomato;
+   background-color:tomato;
+   font-weight:bold;
+   margin: 5px 3px;
+}
+.times{
+    margin:5px 0px
+}
+.color{
+    color:tomato;
+}
+.list_flastSale li:hover {
+cursor: pointer;
+transform: translateY(2px);
+}
+
+/* Phần Footer */
+footer{
+    position: absolute;
+    margin: 50px 50px;
+}
+.footer{
+    list-style: none;
+    width:250px
+}
+.infoShop{
+    display: flex;
+}
+.infoShop li{
+    margin: 0px 20px;
+}
+.ngancach3{
+    position: relative;
+    top: 300px;
+}
+.end{
+    position: relative;
+    top: 320px;
+    text-align: center;
+}
